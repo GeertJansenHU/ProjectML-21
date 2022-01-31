@@ -1,0 +1,13 @@
+{
+  "activation": "relu",
+  "datafile": "c:\\Users\\JansenG\\ml-21-master\\Project ML-21-Geert Jansen\\notebooks\\data\\processed\\data.npy",
+  "dense_layers": 2,
+  "epochs": 30,
+  "grace_period": 3,
+  "local_dir": "c:\\Users\\JansenG\\ml-21-master\\Project ML-21-Geert Jansen\\notebooks\\models\\ray",
+  "log_dir": "c:\\Users\\JansenG\\ml-21-master\\Project ML-21-Geert Jansen\\notebooks\\logs\\hypertuned",
+  "modulepath": "..\\src",
+  "optimizer": "Adam",
+  "samples": 10,
+  "units": 48
+}

@@ -1,0 +1,34 @@
+Failure # 1 (occurred at 2022-01-31_13-45-03)
+Traceback (most recent call last):
+  File "C:\Users\JansenG\Anaconda3\lib\site-packages\ray\tune\trial_runner.py", line 924, in _process_trial
+    results = self.trial_executor.fetch_result(trial)
+  File "C:\Users\JansenG\Anaconda3\lib\site-packages\ray\tune\ray_trial_executor.py", line 787, in fetch_result
+    result = ray.get(trial_future[0], timeout=DEFAULT_GET_TIMEOUT)
+  File "C:\Users\JansenG\Anaconda3\lib\site-packages\ray\_private\client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\JansenG\Anaconda3\lib\site-packages\ray\worker.py", line 1715, in get
+    raise value
+ray.exceptions.RayActorError: The actor died because of an error raised in its creation task, [36mray::ImplicitFunc.__init__()[39m (pid=1880, ip=127.0.0.1)
+  File "python\ray\_raylet.pyx", line 585, in ray._raylet.execute_task
+  File "C:\Users\JansenG\Anaconda3\lib\site-packages\ray\_private\memory_monitor.py", line 156, in raise_if_low_memory
+    raise RayOutOfMemoryError(
+ray._private.memory_monitor.RayOutOfMemoryError: More than 95% of the memory on node D-5CG9521C8X is used (7.44 / 7.82 GB). The top 10 memory consumers are:
+
+PID	MEM	COMMAND
+19748	0.47GiB	C:\Users\JansenG\AppData\Local\Programs\Microsoft VS Code\Code.exe --ms-enable-electron-run-as-node
+19216	0.4GiB	C:\Users\JansenG\AppData\Local\Programs\Microsoft VS Code\Code.exe --ms-enable-electron-run-as-node
+15924	0.39GiB	C:\Users\JansenG\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=renderer --disable-color-c
+3908	0.33GiB	C:\Users\JansenG\AppData\Local\Microsoft\Teams\current\Teams.exe --type=renderer --autoplay-policy=n
+23432	0.3GiB	C:\Users\JansenG\Anaconda3\python.exe c:\Users\JansenG\.vscode\extensions\ms-toolsai.jupyter-2021.11
+23188	0.14GiB	C:\Users\JansenG\AppData\Local\Programs\Microsoft VS Code\Code.exe --type=gpu-process --field-trial-
+10696	0.14GiB	C:\Users\JansenG\AppData\Local\Microsoft\Teams\current\Teams.exe --type=renderer --autoplay-policy=n
+1620	0.08GiB	C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+13432	0.08GiB	C:\Users\JansenG\AppData\Local\Programs\Microsoft VS Code\Code.exe --ms-enable-electron-run-as-node
+12852	0.07GiB	C:\Users\JansenG\AppData\Local\Programs\Microsoft VS Code\Code.exe
+
+In addition, up to 0.0 GiB of shared memory is currently being used by the Ray object store.
+---
+--- Tip: Use the `ray memory` command to list active objects in the cluster.
+--- To disable OOM exceptions, set RAY_DISABLE_MEMORY_MONITOR=1.
+---
+
