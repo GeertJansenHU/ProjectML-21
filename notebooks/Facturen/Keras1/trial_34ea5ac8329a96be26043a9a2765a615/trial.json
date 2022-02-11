@@ -1,0 +1,1 @@
+{"trial_id": "34ea5ac8329a96be26043a9a2765a615", "hyperparameters": {"space": [{"class_name": "Choice", "config": {"name": "units", "default": 8, "conditions": [], "values": [8, 16, 32], "ordered": true}}], "values": {"units": 8}}, "metrics": {"metrics": {}}, "score": null, "best_step": null, "status": "RUNNING"}
